@@ -11,22 +11,27 @@ e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da ga
 
 combustivel = input('Qual o combustivel será usado para abastecer? ')
 litros = float(input('Quantos litros irá abastecer? '))
-preco_por_litro = 1.90
-valor = preco_por_litro*litros
+preco_por_litro_alcool = 1.90
+preco_porlitro_gasolina = 2.50
+
 
 if combustivel == 'A':
         if litros <= 20:
+            valor = preco_por_litro_alcool*litros
             desconto = (valor*3)/100
             valor_com_desconto = valor - desconto
         else:
+            valor = preco_por_litro_alcool * litros
             desconto = (valor*5)/100
             valor_com_desconto = valor - desconto
         print('O valor a ser pago é R${}'.format(valor_com_desconto))
 elif combustivel == 'G':
         if litros <= 20:
+            valor = preco_porlitro_gasolina * litros
             desconto = (valor*4)/100
             valor_com_desconto = valor - desconto
         else:
+            valor = preco_porlitro_gasolina * litros
             desconto = (valor*6)/100
             valor_com_desconto = valor - desconto
         print('O valor a ser pago é R${}'.format(valor_com_desconto))
